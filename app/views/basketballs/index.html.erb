@@ -1,0 +1,12 @@
+<h1>Basketballs</h1>
+<% @basketballs.each do |basketball| %>
+  <h2><%=basketball.name%></h2>
+  <p>
+    <strong>Brand:</strong>
+    <%=basketball.brand.name%>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    <%=basketball.price%>
+  </p>
+<%end%>
