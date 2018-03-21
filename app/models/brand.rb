@@ -4,4 +4,5 @@ class Brand < ApplicationRecord
   has_many :clothes
   has_many :jerseys
   has_many :shoes
+  validates_presence_of :brand
 end
