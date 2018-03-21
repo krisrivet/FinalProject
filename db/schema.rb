@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321190902) do
+ActiveRecord::Schema.define(version: 20180321211618) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -41,6 +41,59 @@ ActiveRecord::Schema.define(version: 20180321190902) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "basketballs", force: :cascade do |t|
+    t.string "name"
+    t.integer "brand_id"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_basketballs_on_brand_id"
+  end
+
+  create_table "brands", force: :cascade do |t|
+    t.string "brand"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "clothes", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "brand_id"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_clothes_on_brand_id"
+  end
+
+  create_table "gears", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "brand_id"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_gears_on_brand_id"
+  end
+
+  create_table "jerseys", force: :cascade do |t|
+    t.string "name"
+    t.integer "brand_id"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_jerseys_on_brand_id"
+  end
+
+  create_table "shoes", force: :cascade do |t|
+    t.string "name"
+    t.integer "brand_id"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_shoes_on_brand_id"
   end
 
 end
