@@ -5,4 +5,8 @@ class Brand < ApplicationRecord
   has_many :jerseys
   has_many :shoes
   validates_presence_of :brand
+
+  def to_s
+    brand
+  end
 end
