@@ -1,19 +1,2 @@
 <h1>Gears</h1>
-<% @gears.each do |gear| %>
-  <h2><%=gear.name%></h2>
-  <p>
-    <strong>Type of Gear:</strong>
-    <%=gear.type%>
-  </p>
-  <p>
-    <strong>Brand:</strong>
-    <%=gear.brand.name%>
-  </p>
-  <p>
-    <strong>Price:</strong>
-    <%=gear.price%>
-  </p>
-  <p>
-    <%= link_to 'View Details', gear %>
-  </p>
-<%end%>
+<%= render @gears %>
