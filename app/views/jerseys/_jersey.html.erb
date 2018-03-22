@@ -7,6 +7,9 @@
   <strong>Price:</strong>
   <%= jersey.price%>
 </p>
+<% if jersey.image.present?%>
+  <p><%= image_tag(jersey.image, :width => 100, :height => 150 )%></p>
+<%end%>
 <p>
   <%= link_to 'View Details', jersey %>
 </p>

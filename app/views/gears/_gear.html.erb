@@ -11,6 +11,9 @@
   <strong>Price:</strong>
   <%= gear.price%>
 </p>
+<% if gear.image.present?%>
+  <p><%= image_tag(gear.image, :width => 100, :height => 150 )%></p>
+<%end%>
 <p>
   <%= link_to 'View Details', gear %>
 </p>

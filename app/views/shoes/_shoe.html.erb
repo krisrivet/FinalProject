@@ -7,6 +7,9 @@
   <strong>Price:</strong>
   <%= shoe.price%>
 </p>
+<% if shoe.image.present?%>
+  <p><%= image_tag(shoe.image, :width => 100, :height => 150 )%></p>
+<%end%>
 <p>
   <%= link_to 'View Details', shoe %>
 </p>

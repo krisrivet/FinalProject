@@ -8,7 +8,7 @@
   <%= basketball.price%>
 </p>
 <% if basketball.image.present?%>
-  <p><%= image_tag basketball.image %></p>
+  <p><%= image_tag(basketball.image, :width => 100, :height => 150 )%></p>
 <%end%>
 <p>
   <%= link_to 'View Details', basketball %>
