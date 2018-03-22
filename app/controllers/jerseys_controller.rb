@@ -4,7 +4,7 @@ class JerseysController < ApplicationController
   end
 
   def show
-    @jerseys = Jersey.find(params[:id])
+    @jersey = Jersey.find(params[:id])
   end
 end
 

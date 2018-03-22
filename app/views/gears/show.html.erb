@@ -1,2 +1,13 @@
-<h1>Gears#show</h1>
-<p>Find me in app/views/gears/show.html.erb</p>
+<h2><%=@gear.name%></h2>
+<p>
+  <strong>Type of Gear:</strong>
+  <%=@gear.type%>
+</p>
+<p>
+  <strong>Brand:</strong>
+  <%=@gear.brand.name%>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%=@gear.price%>
+</p>

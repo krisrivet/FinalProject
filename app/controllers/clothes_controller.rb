@@ -4,6 +4,6 @@ class ClothesController < ApplicationController
   end
 
   def show
-    @clothes = Clothe.find(params[:id])
+    @clothe = Clothe.find(params[:id])
   end
 end
