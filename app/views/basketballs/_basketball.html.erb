@@ -7,6 +7,9 @@
   <strong>Price:</strong>
   <%= basketball.price%>
 </p>
+<% if basketball.image.present?%>
+  <p><%= image_tag basketball.image %></p>
+<%end%>
 <p>
   <%= link_to 'View Details', basketball %>
 </p>
