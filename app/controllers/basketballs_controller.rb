@@ -1,6 +1,6 @@
 class BasketballsController < ApplicationController
   def index
-    @basketballs = Basketball.order(:name)
+    @basketballs = Basketball.order(:name).page(params[:page])
   end
 
   def show

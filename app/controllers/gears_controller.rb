@@ -1,6 +1,6 @@
 class GearsController < ApplicationController
   def index
-    @gears = Gear.order(:name)
+    @gears = Gear.order(:name).page(params[:page])
   end
 
   def show
