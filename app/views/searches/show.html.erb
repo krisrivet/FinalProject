@@ -1,0 +1,31 @@
+<h1>Search Result</h1>
+<p><%= link_to 'Back', new_search_path %></p>
+
+<% if @search.search_basketballs.empty? %>
+  <p>No Records Found</p>
+<%else%>
+  <% @search.search_basketballs.each do |c| %>
+    <br>
+    <div class = "div">
+
+      <p>
+        <strong>Basketball:</strong>
+        <%= c.name %>
+      </p>
+
+      <p>
+        <strong>Brand:</strong>
+        <%= c.brand %>
+      </p>
+
+      <p>
+        <strong>Price:</strong>
+        <%= c.price %>
+      </p>
+
+      <p>
+        <%= image_tag(c.image, :width => 100, :height => 150 )%>
+      </p>
+    </div>
+  <%end%>
+<%end%>
