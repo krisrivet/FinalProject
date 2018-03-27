@@ -1,7 +1,8 @@
 class ShoesController < ApplicationController
   # GET /Shoes
   def index
-    @shoes = Shoe.order(:name).page(params[:page])
+    @search = Shoe.search(params[:q])
+    @shoes = @search.result.page(params[:page])
   end
 
   # GET /Shoes/:id

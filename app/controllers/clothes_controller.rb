@@ -1,6 +1,7 @@
 class ClothesController < ApplicationController
   def index
-    @clothes = Clothe.order(:name).page(params[:page])
+    @search = Clothe.search(params[:q])
+    @clothes = @search.result.page(params[:page])
   end
 
   def show

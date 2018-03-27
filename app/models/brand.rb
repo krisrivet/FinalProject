@@ -4,7 +4,7 @@ class Brand < ApplicationRecord
   has_many :clothes, dependent: :destroy
   has_many :jerseys, dependent: :destroy
   has_many :shoes, dependent: :destroy
-  validates :brand
+  validate :brand
 
   def to_s
     brand

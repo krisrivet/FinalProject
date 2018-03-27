@@ -1,6 +1,7 @@
 class JerseysController < ApplicationController
   def index
-    @jerseys = Jersey.order(:name).page(params[:page])
+    @search = Jersey.search(params[:q])
+    @jerseys = @search.result.page(params[:page])
   end
 
   def show
