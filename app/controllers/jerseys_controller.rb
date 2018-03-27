@@ -7,4 +7,3 @@ class JerseysController < ApplicationController
     @jersey = Jersey.find(params[:id])
   end
 end
-

@@ -7,4 +7,3 @@ class GearsController < ApplicationController
     @gear = Gear.find(params[:id])
   end
 end
-
