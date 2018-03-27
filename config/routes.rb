@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :gears, only: [:index, :show]
   resources :jerseys, only: [:index, :show]
   resources :shoes, only: [:index, :show]
+  resources :searches
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
