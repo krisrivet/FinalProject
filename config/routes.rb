@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'about/index'
+
+  get 'about/show'
+
+  get 'abouts/index'
+
+  get 'abouts/show'
+
   get 'home_page/show'
 
   resources :basketballs, only: [:index, :show]
