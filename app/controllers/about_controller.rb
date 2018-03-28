@@ -3,6 +3,5 @@ class AboutController < ApplicationController
     @abouts = About.all
   end
 
-  def show
-  end
+  def show; end
 end

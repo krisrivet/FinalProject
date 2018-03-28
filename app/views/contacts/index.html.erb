@@ -1,2 +1,11 @@
-<h1>Contacts#index</h1>
-<p>Find me in app/views/contacts/index.html.erb</p>
+<h1>Contact</h1>
+<img src="/tenor.gif" alt="Diagram about the project">
+<br>
+<% @contacts.each do |contact| %>
+  <p>Address:</p>
+  <p><%= contact.address %></p>
+  <p>Phone Number:</p>
+  <p><%= contact.phone %></p>
+  <p>Email:</p>
+  <p><%= contact.email %></p>
+<% end %>

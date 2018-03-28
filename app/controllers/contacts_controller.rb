@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
   def index
+    @contacts = Contact.all
   end
 
-  def show
-  end
+  def show; end
 end
