@@ -7,7 +7,7 @@
   </div>
   <div class="field">
     <%= s.label :brand %><br />
-    <%= s.select :brand, options_for_select(@brands) %>
+    <%= s.select :brand, options_from_collection_for_select(@brands, 'id', 'brand') %>
   </div>
 
   <div class ="actions"><%= s.submit "Search", class: "pure-button pure-button-primary" %></div>

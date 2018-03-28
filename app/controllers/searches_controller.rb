@@ -1,7 +1,7 @@
 class SearchesController < ApplicationController
   def new
     @search = Search.new
-    @brands = Basketball.distinct.pluck(:brand_id)
+    @brands = Brand.all
   end
 
   def create
